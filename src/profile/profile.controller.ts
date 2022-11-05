@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Req } from '@nestjs/common';
+import { Controller, Get, HttpCode, Post, Req } from '@nestjs/common';
 import { Request } from 'express';
 import { ArithmeticDto } from './profile.interface';
 
@@ -10,6 +10,7 @@ export class ProfileController {
         return { slackUsername: 'agwuekene41', backend: true, age: 20, bio: "Hello, I'm a backend developer" }
     }
 
+    @HttpCode(200)
     @Post('arithmetic')
     async arithmetic(@Req() req: Request){
         let result:number

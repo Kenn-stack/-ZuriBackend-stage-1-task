@@ -16,7 +16,7 @@ export class ProfileController {
         if(req.operation_type == 'addition'){ result = req.x + req.y}
         else if(req.operation_type == 'subtraction'){ result = req.x - req.y}
         else if(req.operation_type == 'multiplication'){ result = req.x * req.y}
-        return { 'slackUsername': 'agwuekene41', 'result': result, 'operation_type' : req.operation_type}
+        return { slackUsername: 'agwuekene41', result: result, operation_type : req.operation_type}
 
     }
 
